@@ -1,0 +1,201 @@
+
+/* line under header 
+code from https://stackoverflow.com/questions/16073323/horizontal-rule-line-beneath-each-h1-heading-in-css */
+header:after {
+	content:' ';
+	display : block;
+	border : 5px double #ffc30f;
+	}
+
+.header {
+	height : 100px;
+	}
+
+.header_inner {
+	display : flex;
+	flex-wrap : wrap;
+	width : 100%;
+	height : 90%;
+	margin : auto;
+	}
+
+.box {
+	width : 100%
+	}
+
+/* when screen is 604 and under name is first initail and last */
+@media screen and (max-width : 604px) {
+
+	body {
+		margin : auto;
+		}
+
+	.header_logo {
+		content : url("images/udacity_small.png");
+		width : 70px;
+		height : 70px;
+		}
+
+	.header_name_short {
+		font-size : 50px;
+		position : relative;
+		text-align : center;
+		width : 70%;
+		color : #c70039;
+		}
+
+	.header_name {
+		display : none;
+		}
+
+	.header_name_long {
+		display : none;
+		}
+
+	.header_role {
+		display : none;
+		}
+	}
+
+/* when screen is 605-900 px name is first and last inital */
+@media screen and (min-width : 605px) and (max-width:900px) {
+
+	body {
+		margin : auto;
+		}
+
+	.header_logo {
+		content : url("images/udacity_small.png");
+		width : 70px;
+		height : 70px;
+		}
+
+	.header_name {
+        font-size : 50px;
+		position : relative;
+		text-align : center;
+		width : 70%;
+		color : #c70039;
+		}
+
+	.header_name_short {
+		display : none;
+		}
+
+	.header_name_long {
+		display : none;
+		}
+
+	.header_role {
+		display : none;
+		}
+	}
+
+/* when screen is 901 px or above name = full name and role is displayed */
+@media screen and (min-width : 901px){
+
+	body {
+		margin : auto;
+		}
+
+	.header_logo {
+		content : url("images/udacity_large.png");
+		width : 200px;
+		height : 90px;
+		}
+
+	.header_name_short {
+		display : none;
+		}
+
+	.header_name {
+		display:none;
+		}
+
+	#inner2 {
+		width : 70%;					
+		}
+
+	.header_name_long {
+		position : relative;
+		text-align : right;
+		font-size : 50px;
+		color : #c70039;
+		}
+
+		.header_role {
+		text-align : right;
+		font-size :20px;
+		color : #900c3f;
+		}
+	}
+
+/* when screen is 1280px or higher center page and increase margin */
+@media screen and (min-width: 1280px) {
+
+	body {
+		max-width: 1280px;
+		margin: auto;
+		}
+	}
+
+/* div(flex wrap) */
+.flex-container {
+	display: flex;
+	flex-wrap : wrap;
+	justify-content: center; /* https://www.w3schools.com/cssref/css3_pr_justify-content.asp */
+	}
+
+/* divs(figures) */
+.flex-container  > div {
+	background-color: #ffc30f;
+	width: 300px;
+	margin: 10px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 150%;
+	}
+
+/* changes div background color when hovered */
+.flex-container >div:hover {
+	background-color: #ff5733;
+	}
+
+/* make all portfolio images black and white 
+ code from https://www.w3schools.com/cssref/css3_pr_filter.asp */
+.port-image {
+	width: 250px;
+	height: 250px;
+	margin: -10px;
+  	-webkit-filter: grayscale(90%);
+	filter: grayscale(90%);
+	}
+
+/* make all portfolio images color when hovered
+ code from https://www.w3schools.com/cssref/css3_pr_filter.asp */
+.port-image:hover {
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%); 
+	}
+
+/* header 1 color */
+h1 {
+	color : #c70039;
+	text-align : center;
+	background-color: #ffc30f;
+	}
+
+/* link color */
+a {
+	color : #900c3f;
+	}
+
+/* top image under header */
+.top-img {
+	background-image: url("images/devprogress.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color : #000;
+	height : 300px;
+	width : auto;
+	}
